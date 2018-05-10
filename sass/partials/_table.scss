@@ -1,0 +1,395 @@
+.table {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    @include rem(padding, 50);
+    padding-bottom: 0;
+
+    @include desktop {
+      @include rem2(padding, 50, 100);
+      padding-bottom: 0;
+    }
+
+    &__up {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include desktop {
+        flex-direction: row;
+      }
+
+      &__details {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 80%;
+
+        h1 {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        &__owner {
+          text-transform: uppercase;
+          font-weight: 500;
+          color: lighten($logo-color, 4%);
+          @include rem(font-size, 12);
+        }
+
+        &__info {
+          display: flex;
+          align-items: center;
+
+          &__tagline {
+            @include rem(margin-right, 12);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+
+          &__tokens {
+            position: absolute;
+            top: -24px;
+            left: 0;
+            background: $text-color;
+            display: inline-flex;
+            align-self: center;
+            border-radius: 6px;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: #fff;
+            @include rem2(padding, 2, 8);
+            @include rem(margin-bottom, 14);
+            @include rem(font-size, 12);
+
+            @include desktop {
+              align-self: flex-start;
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        h1 {
+          color: $text-color;
+          @include rem(font-size, 42);
+          @include rem(margin-bottom, 14);
+
+          @include desktop {
+            text-align: left;
+            margin-bottom: 0;
+          }
+        }
+        h3 {
+          color: $text-color;
+          font-weight: 400;
+          text-align: center;
+          @include rem(font-size, 16);
+          @include rem(margin-bottom, 14 * 2);
+
+          @include desktop {
+            margin-bottom: 0;
+            text-align: left;
+          }
+        }
+      }
+
+      &__buttons {
+        display: flex;
+        justify-content: center;
+
+        @include desktop {
+          justify-content: flex-start;
+        }
+
+        button {
+          background: white;
+          font-weight: 500;
+          border: none;
+          color: $text-color;
+          align-self: center;
+          cursor: pointer;
+          outline: none;
+          min-height: 25px;
+          min-width: 25px;
+          @include rem(font-size, 16);
+          @include rem2(padding, 10, 15);
+
+          .chevronUp {
+            @include rem(margin-right, 14);
+
+            svg {
+              @include rem(width, 10);
+              @include rem(height, 10);
+
+              .fillColor.white {
+                fill: white;
+              }
+            }
+          }
+
+          &:nth-child(even) {
+            @include rem2(margin, 0, 10);
+          }
+
+          &.subscribe {
+            color: white;
+            background: $logo-color;
+
+            &:hover {
+              background: lighten($logo-color, 4%);
+            }
+
+            &:after {
+              content: 'Subscribe';
+            }
+          }
+          &.subscribed {
+            color: white;
+            background: $upvote-text-color;
+
+            &:hover {
+              background: darken($upvote-text-color, 8%);
+            }
+
+            &:after {
+              content: 'Unsubscribe';
+            }
+          }
+
+          &.upvote {
+            display: flex;
+            align-items: center;
+
+            div:first-child {
+              margin-right: 12px;
+            }
+
+            &:hover {
+              color: white;
+              background: $text-link-color-hover;
+            }
+          }
+          &.upvoted {
+            color: white;
+            background: $logo-color;
+
+            &:hover {
+              background: darken($logo-color, 8%);
+            }
+          }
+          &.flag {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 36px;
+          }
+        }
+      }
+    }
+
+    &__menu {
+      display: flex;
+      justify-content: center;
+      text-transform: uppercase;
+      @include rem(margin-top, 50);
+      @include rem(font-size, 14);
+
+      @include desktop {
+        justify-content: flex-start;
+      }
+
+      a.selected, a:hover {
+        color: $text-color !important;
+        background: transparent !important;
+
+        svg {
+          .strokeColor {
+            stroke: $text-color;
+          }
+          .fillColor {
+            fill: $text-color;
+          }
+        }
+      }
+
+      a {
+        color: #cbd0db !important;
+
+        svg {
+          width: 16px;
+          height: 16px;
+          align-self: center;
+          @include rem(margin-right, 3);
+          @include rem(margin-bottom, 1);
+        }
+
+        &:hover {
+          svg {
+            .strokeColor {
+              stroke: $text-color;
+            }
+            .fillColor {
+              fill: $text-color;
+            }
+          }
+        }
+
+        &:last-child {
+          span.table__header__menu__item {
+            margin-right: 0;
+          }
+        }
+      }
+
+      &__item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        @include rem(margin-right, 18);
+        @include rem(padding-bottom, 7);
+
+        @include desktop {
+          @include rem(margin-right, 36);
+        }
+
+        div:first-child {
+          @include rem(margin-top, -2);
+          @include rem(margin-right, 4);
+        }
+
+        span {
+          font-size: 8px;
+          line-height: 10px;
+          padding: 2px;
+          text-align: center;
+          vertical-align: center;
+          border-radius: 10px;
+          width: 15px;
+          height: 15px;
+          background: $primary-color;
+          color: #fff;
+          position: absolute;
+          top: -5px;
+          right: -14px;
+        }
+
+        @include desktop {}
+      }
+    }
+  }
+}
+
+.table caption + thead tr:first-child th, .table caption + thead tr:first-child td, .table colgroup + thead tr:first-child th, .table colgroup + thead tr:first-child td, .table thead:first-child tr:first-child th, .table thead:first-child tr:first-child td {
+  border: 0;
+}
+
+.table tr:nth-child(odd) td {
+  background: white !important;;
+}
+
+.table tr:nth-child(even) td {
+  background: lighten($background-color, 2) !important;
+}
+
+.table td {
+  background: transparent !important;
+  padding: 10px;
+}
+
+.table th {
+  padding: 15px 10px;
+  background: transparent;
+  font-weight: 700;
+  text-align: left;
+}
+
+.dxTqwX {
+  padding: 15px !important;
+  border-radius: 7px;
+}
+
+.dxTqwX a {
+  margin-bottom: 8px;
+  color: #b1bbc7;
+}
+
+.bAvots {
+  padding: 0 !important;
+  border-radius: 7px;
+  height: auto !important;
+}
+
+.bAvots div {
+  background: #f8f8fb;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.bAvots div button {
+  border: none;
+  width: 25%;
+  color: #b1bbc7;
+  cursor: pointer;
+}
+
+.bAvots div button:first-child {
+  width: 50%;
+  text-align: left;
+  color: #6a7c94;
+}
+
+.bAvots div button:last-child {
+  border: none;
+  background: #6a7c94;
+  color: white;
+  border-radius: 4px;
+  padding: 5px 10px;
+  width: 25%;
+}
+
+.sc-dnqmqq table {
+  margin: 10px;
+  color: #b1bbc7;
+}
+
+.sc-dnqmqq select {
+  margin: 0 15px;
+  border: none;
+  background: transparent;
+  text-align: center;
+}
+
+.sc-dnqmqq option {
+  margin: 0 15px;
+  border: none;
+  background: transparent;
+}
+
+.sc-dnqmqq table button {
+  border-radius: 50%;
+  border: none;
+  background: #6a7c94;
+  font-weight: 500;
+  color: #fff;
+  padding: 2px 6px;
+  font-size: 10px;
+  margin: 0 10px 0 0;
+}
+
+.jQqZcd {
+  position: sticky !important;
+}
+
+#tableContainer {
+  margin-left: -28px;
+  margin-right: -28px;
+}

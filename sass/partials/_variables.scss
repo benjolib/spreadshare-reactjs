@@ -1,0 +1,46 @@
+// colors
+$base-color: #242442;
+$background-color: #F2F2F8;
+$blue-background-color: #9baabe;
+$primary-color: #2ead6b;
+$logo-color: #2ead6b;
+$success-button: #24AE69;
+$text-color: #6A7C94;
+$text-color-alternate: #B1BBC7;
+$text-color-menu-inactive: #b9c3d2;
+$text-color-menu-active: white;
+$text-link-color: $text-color-alternate;
+$text-link-color-hover: $text-color;
+$text-link-color-active: $logo-color;
+$text-link-color-active-alternative: $text-color;
+$upvote-background-color: #EBEBF4;
+$upvote-text-color: #737C94;
+$card-tokens-background-color: #9baabe;
+$facebook-color: #3B5998;
+$google-color: #4688f1;
+$twitter-color: #48A9E5;
+$medium-color: #1CB374;
+$linkedin-color: #1178B3;
+$googleplus-color: #D35048;
+$quora-color: #E31F21;
+$stackoverflow-color: #F28033;
+$github-color: #23282D;
+$ycombinator-color: #EF8533;
+$angellist-color: #23282D;
+$accept-color: $logo-color;
+$reject-color: #DF5364;
+$success: $logo-color;
+$error: #ffc4c4;
+$warning: #ffc966;
+$notice: #c4c4ff;
+
+
+// fonts
+// @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&subset=latin-ext');
+
+$primary-font: 'Montserrat', sans-serif;
+
+// breakpoints
+$mobile-width: 280px;
+$tablet-width: 768px;
+$desktop-width: 1024px;

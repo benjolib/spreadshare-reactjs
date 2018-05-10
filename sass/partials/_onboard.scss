@@ -1,0 +1,1051 @@
+// signup/follow
+.follow {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: $text-color;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include rem2(margin, 50, 0);
+    @include rem(margin-bottom, 100);
+
+    @include tablet {
+      @include rem(margin-bottom, 200);
+    }
+
+    @include desktop {
+      flex-direction: row;
+      @include rem(margin-bottom, 300);
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      @include desktop {
+        width: 80%;
+      }
+    }
+
+    &__title {
+      width: 100%;
+      text-align: center;
+      align-self: center;
+      margin: 0;
+      font-weight: 700;
+      @include rem(font-size, 30);
+
+      @include tablet {
+        @include rem(font-size, 35);
+      }
+
+      @include desktop {
+        width: 80%;
+        text-align: left;
+        @include rem(font-size, 40);
+      }
+
+      span {
+        color: $text-color-alternate;
+      }
+    }
+    &__subtitle {
+      width: 80%;
+      margin: 0;
+      font-weight: 300;
+      @include rem(margin-top, 16);
+      @include rem(margin-bottom, 16 * 2);
+      @include rem(font-size, 16);
+
+      span {
+        color: $logo-color;
+
+        &:last-child {
+          font-weight: 500;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    &__main {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+
+      &__cards {
+        display: flex;
+        flex-direction: column;
+
+        &__item {
+          position: relative;
+          display: flex;
+          background: white;
+          border-radius: 6px;
+          @include rem(margin-bottom, 20);
+          @include rem2(padding, 22, 20);
+
+          img {
+            align-self: center;
+            border-radius: 8px;
+            width: 20%;
+            height: 20%;
+
+            @include tablet {
+              @include rem(width, 60);
+              @include rem(height, 60);
+            }
+            @include desktop {
+              @include rem(width, 80);
+              @include rem(height, 80);
+            }
+          }
+
+          &__text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @include rem(margin-left, 16);
+
+            p {
+              margin: 0;
+
+              &:first-child {
+                color: black;
+                font-weight: 600;
+                @include rem(margin-bottom, 2.5);
+                @include rem(font-size, 16);
+
+                @include tablet {
+                  @include rem(margin-bottom, 3);
+                  @include rem(font-size, 17);
+                }
+                @include desktop {
+                  @include rem(margin-bottom, 5);
+                  @include rem(font-size, 18);
+                }
+              }
+              &:last-child {
+                font-weight: 300;
+                color: $text-color;
+                font-size: 14px !important;
+                @include rem(margin-top, 2.5);
+                @include rem(font-size, 14);
+
+                @include tablet {
+                  @include rem(font-size, 15);
+                  @include rem(margin-top, 3);
+                }
+                @include desktop {
+                  @include rem(font-size, 16);
+                  @include rem(margin-top, 5);
+                }
+              }
+            }
+          }
+
+          &__button {
+            position: absolute;
+            top: 7px;
+            right: 10px;
+            background: #ebebf4;
+            border-radius: 4px;
+            @include rem2(padding, 4, 8);
+
+            @include tablet {
+              top: 10px;
+              right: 13px;
+              @include rem2(padding, 6, 10);
+            }
+            @include desktop {
+              top: 15px;
+              right: 18px;
+              @include rem2(padding, 8, 12);
+            }
+
+            &:hover {
+              cursor: pointer;
+              background: darken(#ebebf4, 8%);
+            }
+
+            span {
+              color: $upvote-text-color;
+              font-weight: 500;
+              text-transform: capitalize;
+              @include rem(font-size, 10);
+
+              @include tablet {
+                @include rem(font-size, 14);
+              }
+              @include desktop {
+                font-weight: 500;
+                @include rem(font-size, 16);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__aside {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      @include rem(margin-top, 110 / 2);
+      @include rem(margin-right, 50);
+
+      @include desktop {
+        width: 20%;
+        @include rem(margin-top, 130);
+      }
+
+      &__box {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border-radius: 8px;
+        @include rem2(padding, 15, 20);
+
+        a {
+          text-decoration: none;
+          color: $text-color;
+
+          &:hover {
+            color: $text-color;
+            text-decoration: none;
+          }
+
+          div {
+            text-transform: uppercase;
+            font-weight: 500;
+            border-radius: 4px;
+            @include rem2(padding, 10, 15);
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            &:first-child {
+              @include rem(margin-bottom, 14);
+            }
+          }
+        }
+      }
+
+      p {
+        text-align: center;
+        @include rem2(margin, 20, 0);
+      }
+    }
+  }
+}
+
+// signup/topics
+.topics {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: $text-color;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include rem2(margin, 50, 0);
+    @include rem(margin-bottom, 100);
+
+    @include tablet {
+      @include rem(margin-bottom, 200);
+    }
+
+    @include desktop {
+      flex-direction: row;
+      @include rem(margin-bottom, 300);
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      @include desktop {
+        width: 80%;
+      }
+    }
+
+    &__title {
+      width: 100%;
+      text-align: center;
+      align-self: center;
+      margin: 0;
+      font-weight: 700;
+      @include rem(font-size, 30);
+
+      @include tablet {
+        @include rem(font-size, 35);
+      }
+
+      @include desktop {
+        width: 80%;
+        text-align: left;
+        @include rem(font-size, 40);
+      }
+
+      span {
+        color: $text-color-alternate;
+      }
+    }
+    &__subtitle {
+      width: 80%;
+      margin: 0;
+      font-weight: 300;
+      @include rem(margin-top, 16);
+      @include rem(margin-bottom, 16 * 2);
+      @include rem(font-size, 16);
+
+      span {
+        color: $logo-color;
+
+        &:last-child {
+          font-weight: 500;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    &__main {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border-radius: 8px;
+      width: 80%;
+
+      &__cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include rem(padding, 25);
+
+        @include tablet {
+          justify-content: space-between;
+          @include rem(padding, 20);
+        }
+        @include desktop {
+          justify-content: space-between;
+          @include rem(padding, 30);
+        }
+
+        &__item {
+          position: relative;
+          display: flex;
+          background: url('/assets/images/topic_background.png');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 7px;
+          @include rem(margin, 5);
+          @include rem2(padding, 52, 104);
+
+          @include tablet {
+            width: 236px;
+            padding: 45px 0px;
+            text-align: center;
+            display: block;
+          }
+
+          @include mobile {
+            width: 268px;
+            padding: 45px 0px;
+            display: block;
+            text-align: center;
+          }
+
+          @include desktop {
+            width: 197px;
+            display: block;
+            padding: 45px 0px;
+            margin: 0;
+            margin-bottom: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+            text-align: center;
+            font-size: 14px;
+          }
+
+          &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+          }
+
+          p {
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: 300;
+            color: white;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    &__aside {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      @include rem(margin-top, 110 / 2);
+      @include rem(margin-right, 50);
+
+      @include desktop {
+        align-self: center;
+        width: 20%;
+        @include rem(margin-top, 32);
+      }
+
+      &__box {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border-radius: 8px;
+        @include rem2(padding, 15, 20);
+
+        a {
+          text-decoration: none;
+          color: $text-color;
+
+          &:hover {
+            color: $text-color;
+            text-decoration: none;
+          }
+
+          div {
+            text-transform: uppercase;
+            font-weight: 500;
+            border-radius: 4px;
+            @include rem2(padding, 10, 15);
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            &:first-child {
+              @include rem(margin-bottom, 14);
+            }
+          }
+        }
+      }
+
+      p {
+        text-align: center;
+        @include rem2(margin, 20, 0);
+      }
+    }
+  }
+}
+
+// signup/locations
+.locations {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: $text-color;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include rem2(margin, 50, 0);
+    @include rem(margin-bottom, 100);
+
+    @include tablet {
+      @include rem(margin-bottom, 200);
+    }
+
+    @include desktop {
+      flex-direction: row;
+      @include rem(margin-bottom, 300);
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      @include desktop {
+        width: 80%;
+      }
+    }
+
+    &__title {
+      width: 100%;
+      text-align: center;
+      align-self: center;
+      margin: 0;
+      font-weight: 700;
+      @include rem(font-size, 30);
+
+      @include tablet {
+        @include rem(font-size, 35);
+      }
+
+      @include desktop {
+        width: 80%;
+        text-align: left;
+        @include rem(font-size, 40);
+      }
+
+      span {
+        color: $text-color-alternate;
+      }
+    }
+    &__subtitle {
+      width: 80%;
+      margin: 0;
+      font-weight: 300;
+      @include rem(margin-top, 16);
+      @include rem(margin-bottom, 16 * 2);
+      @include rem(font-size, 16);
+
+      span {
+        color: $logo-color;
+      }
+    }
+
+    &__main {
+      display: flex;
+      background: white;
+      border-radius: 8px;
+      width: 80%;
+      flex-direction: column;
+
+      @include desktop {
+        flex-direction: row;
+      }
+
+      &__left {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        @include rem2(padding, 25, 30);
+
+        @include desktop {
+          //width: 30%;
+          box-sizing: content-box;
+        }
+
+        p {
+          color: $text-color-alternate;
+          font-weight: 300;
+          text-transform: uppercase;
+          margin: 0;
+          @include rem(margin-bottom, 10);
+        }
+
+        &__add {
+          &__search {
+            display: flex;
+
+            &__icon {
+              display: flex;
+              justify-content: center;
+              background: #f8f8fb;
+              border-top-left-radius: 3px;
+              border-bottom-left-radius: 3px;
+              @include rem(width, 38);
+
+              img {
+                align-self: center;
+                @include rem(padding-left, 5);
+              }
+            }
+            &__field {
+              font-family: $primary-font;
+              font-weight: 400;
+              color: #6a7c94;
+              background: #f8f8fb;
+              border: none;
+              outline: none;
+              border-radius: 3px;
+              width: 100%;
+              @include rem(padding-left, 5);
+              @include rem(height, 40);
+
+              &::-webkit-input-placeholder {
+                text-transform: uppercase;
+                color: #dddde3;
+                font-weight: lighter;
+                @include rem(font-size, 14);
+              }
+              &::-moz-placeholder {
+                text-transform: uppercase;
+                color: #dddde3;
+                font-weight: lighter;
+                @include rem(font-size, 14);
+              }
+              &:-ms-input-placeholder {
+                text-transform: uppercase;
+                color: #dddde3;
+                font-weight: lighter;
+                @include rem(font-size, 14);
+              }
+              &:-moz-placeholder {
+                text-transform: uppercase;
+                color: #dddde3;
+                font-weight: lighter;
+                @include rem(font-size, 14);
+              }
+            }
+          }
+        }
+      }
+
+      &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 0;
+        align-items: center;
+        padding: 0;
+
+        @include desktop {
+          width: 70%;
+          box-sizing: content-box;
+          align-items: flex-start;
+          @include rem2(padding, 25, 30);
+        }
+
+        &__regions {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          @include desktop {
+            justify-content: flex-start;
+          }
+
+          &__tag {
+            display: flex;
+            background: inherit;
+            @include rem(margin-right, 12);
+            @include rem(margin-bottom, 6);
+
+            &:nth-child(even) {
+              margin-right: 0;
+            }
+
+            @include tablet {
+              &:nth-child(even) {
+                @include rem(margin-right, 12);
+              }
+            }
+
+            @include desktop {
+              &:nth-child(even) {
+                @include rem(margin-right, 12);
+              }
+            }
+
+            &__text {
+              margin: 0;
+              background: $card-tokens-background-color;
+              color: white;
+              font-weight: 300;
+              border-top-left-radius: 4px;
+              border-bottom-left-radius: 4px;
+              @include rem(font-size, 14);
+              @include rem2(padding, 8, 12);
+            }
+
+            &__close {
+              display: flex;
+              justify-content: center;
+              color: $card-tokens-background-color;
+              background: $background-color;
+              border-top-right-radius: 4px;
+              border-bottom-right-radius: 4px;
+              text-align: center;
+              @include rem(width, 33);
+
+              &:hover {
+                cursor: pointer;
+              }
+
+              img {
+                @include rem(width, 9);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__aside {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      @include rem(margin-top, 110 / 2);
+      @include rem(margin-right, 50);
+
+      @include desktop {
+        width: 20%;
+        @include rem(margin-top, 130);
+      }
+
+      &__box {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border-radius: 8px;
+        @include rem2(padding, 15, 20);
+
+        a {
+          text-decoration: none;
+          color: $text-color;
+
+          &:hover {
+            color: $text-color;
+            text-decoration: none;
+          }
+
+          div {
+            text-transform: uppercase;
+            font-weight: 500;
+            border-radius: 4px;
+            @include rem2(padding, 10, 15);
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            &:first-child {
+              @include rem(margin-bottom, 14);
+            }
+          }
+        }
+      }
+
+      p {
+        text-align: center;
+        @include rem2(margin, 20, 0);
+      }
+    }
+  }
+}
+
+// signup/tables
+.tables {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: $text-color;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include rem2(margin, 50, 0);
+    @include rem(margin-bottom, 100);
+
+    @include tablet {
+      @include rem(margin-bottom, 200);
+    }
+
+    @include desktop {
+      flex-direction: row;
+      @include rem(margin-bottom, 300);
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      @include desktop {
+        width: 80%;
+      }
+    }
+
+    &__title {
+      width: 100%;
+      text-align: center;
+      align-self: center;
+      margin: 0;
+      font-weight: 600;
+      @include rem(font-size, 30);
+
+      @include tablet {
+        @include rem(font-size, 35);
+      }
+
+      @include desktop {
+        width: 80%;
+        text-align: left;
+        @include rem(font-size, 40);
+      }
+
+      span {
+        color: $text-color-alternate;
+      }
+    }
+    &__subtitle {
+      width: 80%;
+      margin: 0;
+      font-weight: 300;
+      @include rem(margin-top, 16);
+      @include rem(margin-bottom, 16 * 2);
+      @include rem(font-size, 16);
+
+      span {
+        color: $logo-color;
+
+        &:last-child {
+          font-weight: 500;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__main {
+      display: flex;
+      width: 80%;
+      flex-direction: column;
+
+      @include desktop {
+        flex-direction: row;
+      }
+
+      &__cards {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &__item {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          background: white;
+          color: $text-color;
+          border-radius: 6px;
+          @include rem2(padding, 25, 35);
+          @include rem(margin-bottom, 20);
+          &__info {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            &__title {
+              display: flex;
+              flex-direction: column;
+
+              h3 {
+                align-self: flex-start;
+                margin: 0;
+                color: black;
+                font-weight: 600;
+                @include rem(font-size, 20);
+
+                &:hover {
+                  cursor: pointer;
+                  color: $logo-color;
+                }
+              }
+              p {
+                @include rem(font-size, 16);
+                padding-bottom: 10px;
+              }
+            }
+
+            &__upvote {
+              position: absolute;
+              top: 20px;
+              right: 20px;
+
+              @include desktop {
+                display: flex;
+                align-self: flex-start;
+                background: $upvote-background-color;
+                color: $upvote-text-color;
+                font-weight: 300;
+                border-radius: 3px;
+                @include rem2(padding, 10, 20);
+
+                &:hover {
+                  cursor: pointer;
+                  background: darken($upvote-background-color, 4%);
+                }
+
+                img {
+                  @include rem(margin-right, 12);
+                }
+              }
+            }
+          }
+
+          &__stats {
+            display: none;
+
+            a {
+              margin-top: 16px;
+
+              span i {
+                font-style: normal;
+                padding-left: 5px;
+                color: #b1bbc7;
+              }
+            }
+
+            @include tablet {
+              display: flex;
+              border-top: 2px solid #f7f7fb;
+              @include rem(font-size, 12);
+            }
+            @include desktop {
+              display: flex;
+              border-top: 2px solid #f7f7fb;
+              @include rem(font-size, 14);
+            }
+
+            div {
+              @include rem(margin-top, 14);
+              @include rem(margin-right, 16);
+
+              &:hover {
+                cursor: pointer;
+              }
+
+              &:first-child {
+                background: $logo-color;
+                border-radius: 3px;
+                @include rem2(padding, 2, 8);
+                color: white;
+              }
+              &:nth-child(2) {
+                background: $card-tokens-background-color;
+                border-radius: 3px;
+                color: white;
+                @include rem2(padding, 2, 8);
+              }
+              &:nth-child(3), &:last-child {
+                display: flex;
+                align-items: center;
+                img {
+                  align-self: center;
+                  @include rem(width, 14);
+                  @include rem(margin-right, 5);
+                }
+                span {
+                  color: $text-color;
+
+                  i {
+                    font-style: normal;
+                    color: $text-link-color;
+                  }
+                }
+              }
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__aside {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      @include rem(margin-top, 110 / 2);
+      @include rem(margin-right, 50);
+
+      @include desktop {
+        width: 20%;
+        @include rem(margin-top, 130);
+      }
+
+      &__box {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border-radius: 8px;
+        @include rem2(padding, 15, 20);
+
+        a {
+          text-decoration: none;
+          color: $text-color;
+
+          &:hover {
+            color: $text-color;
+            text-decoration: none;
+          }
+
+          div {
+            text-transform: uppercase;
+            font-weight: 500;
+            border-radius: 4px;
+            @include rem2(padding, 10, 15);
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            &:first-child {
+              @include rem(margin-bottom, 14);
+            }
+          }
+        }
+      }
+
+      p {
+        text-align: center;
+        @include rem2(margin, 20, 0);
+      }
+    }
+  }
+}
+#onboardingForm {
+  @include rem(margin-top, 180);
+
+  @include tablet {
+    @include rem(margin-top, 160);
+  }
+  @include desktop {
+    display: flex;
+    @include rem(margin-top, 100);
+  }
+}
+
+@media (min-width: 1230px) and (max-width: 1320px) {
+
+  #sidebarForm {
+    font-size: 12px;
+  }
+  .tableCard__stats__item {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1231px) {
+  .tableCard__stats__item {
+    font-size: 12px;
+  }
+  #sidebarForm {
+    font-size: 10px;
+  }
+}

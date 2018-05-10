@@ -1,0 +1,167 @@
+/* active classes */
+.sign-box-selected {
+  background: #F2F2F8;
+}
+.settings-box-selected {
+  background: #F2F2F8;
+  color: #6B7D94;
+  font-weight: 400 !important;
+}
+.table-card-upvoted {
+  color: $logo-color;
+
+  @include desktop {
+    background: $logo-color;
+    color: white;
+
+    &:hover {
+      background: darken($logo-color, 8%);
+    }
+  }
+}
+.link-active {
+  color: $text-link-color-hover !important;
+
+  a {
+    color: $text-link-color-hover !important;
+  }
+}
+.dropdown--filters {
+  .link-active {
+    a {
+      color: $text-link-color-hover !important;
+
+      &:after {
+        content: ' (selected)';
+        color: $logo-color;
+      }
+    }
+  }
+}
+
+.selected {
+  color: white !important;
+  background: #2ead6b !important;
+
+  &:hover {
+    background: darken(#2ead6b, 8%) !important;
+  }
+}
+
+.selected span,
+.selected p {
+  color: white;
+}
+
+.not-following-user {
+  &:after {
+    content: 'Follow';
+  }
+}
+.following-user {
+  &:after {
+    content: 'Unfollow';
+    @include rem(font-size, 10);
+  }
+}
+
+.table-menu-tab-active {
+  border-bottom: 3.4px solid $text-color;
+  padding-bottom: 7px;
+}
+
+// css hacks for responsive navbar dropdowns
+.left160 {
+  left: 160px !important;
+}
+
+// viewport modifiers
+.mobile-only {
+  @include mobile {
+    display: block;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+  &--flex {
+    @include mobile {
+    display: flex;
+    }
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+}
+.tablet-only {
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
+    display: block;
+  }
+  @include desktop {
+    display: none;
+  }
+  &--flex {
+    @include mobile {
+    display: none;
+    }
+    @include tablet {
+      display: flex;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+}
+.desktop-only {
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: block;
+  }
+  &--flex {
+    @include mobile {
+    display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: flex;
+    }
+  }
+}
+
+.mobile-and-tablet {
+  @include mobile {
+    display: block;
+  }
+  @include tablet {
+    display: block;
+  }
+  @include desktop {
+    display: none;
+  }
+  &--flex {
+    @include mobile {
+      display: flex;
+    }
+    @include tablet {
+      display: flex;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+}

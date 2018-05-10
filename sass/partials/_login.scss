@@ -1,0 +1,369 @@
+.login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: $text-color;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include rem2(margin, 50, 0);
+    @include rem(margin-bottom, 100);
+
+    @include tablet {
+      @include rem(margin-bottom, 200);
+    }
+
+    @include desktop {
+      flex-direction: row;
+      @include rem(margin-bottom, 300);
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      @include desktop {
+        width: 80%;
+      }
+    }
+
+    &__title {
+      width: 100%;
+      text-align: left;
+      align-self: center;
+      margin: 0;
+      font-weight: 700;
+      @include rem(font-size, 38);
+
+      @include desktop {
+        width: 80%;
+        text-align: left;
+      }
+      @include tablet {
+        text-align: center;
+      }
+      @include mobile {
+        text-align: center;
+      }
+    }
+
+    &__subtitle {
+      width: 80%;
+      margin: 0;
+      font-weight: 300;
+      font-family: $primary-font;
+      text-align: left;
+      @include rem(margin-top, 5);
+      @include rem(margin-bottom, 21 * 2);
+      @include rem(font-size, 16);
+
+      @include desktop {
+        margin: 3px 0 42px 0;
+      }
+
+      @include tablet {
+        text-align: center;
+      }
+      @include mobile {
+        text-align: center;
+        margin: 8px 0 42px 0;
+      }
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border-radius: 8px;
+      width: 80%;
+      @include rem2(padding, 25, 35);
+
+      p {
+        // color: lighten($text-color, 10%);
+        color:#B1BBC7;
+        font-weight: 300;
+        text-transform: uppercase;
+        @include rem(font-size, 14);
+        @include rem(margin-top, 38);
+        margin-bottom: 15px;
+
+        span {
+          text-transform: lowercase;
+        }
+
+        a {
+          color: $text-color;
+          text-transform: none;
+          text-decoration: underline;
+          color:#B1BBC7;
+
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+          &:visited {
+            text-decoration: underline;
+            color: $text-color;
+          }
+          &:focus {
+            text-decoration: underline;
+            color: $text-color;
+          }
+        }
+      }
+
+      span {
+        font-weight: 300;
+        // color: lighten($text-color, 10%);
+        color: #DEE0E7;
+        @include rem(margin-top, 8);
+        @include rem(font-size, 12);
+      }
+
+      input {
+        border: none;
+        outline: none;
+        background: $background-color;
+        border-radius: 3px;
+        color: $text-color;
+        width: auto;
+        @include rem2(padding, 0, 10);
+        @include rem(height, 30);
+
+        @include desktop {
+          @include rem(width, 400);
+        }
+      }
+
+      &__buttons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background: #F8F8FB;
+        @include rem2(margin, 0, -35);
+        @include rem(margin-top, 32 * 2);
+        @include rem(margin-bottom, -25);
+        @include rem(padding, 16);
+        text-transform: 500;
+
+        a {
+          text-decoration: none;
+          font-weight: 500;
+          text-transform: capitalize;
+          color: #B1BBC7;
+          background: transparent;
+          @include rem(margin-right, 24);
+
+          &:hover {
+            text-decoration: none;
+            color: $text-link-color-hover;
+          }
+        }
+
+        button {
+          font-weight: 500;
+          text-transform: capitalize;
+          color: white;
+          background: $logo-color;
+          border: none;
+          border-radius: 4px;
+          @include rem(font-size, 15);
+          @include rem2(padding, 12, 20);
+
+          &:hover {
+            cursor: pointer;
+            background: lighten($logo-color, 4%);
+          }
+        }
+      }
+    }
+
+    &__aside {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      @include rem(margin-top, 110);
+      @include rem(margin-right, 50);
+
+      @include desktop {
+        width: 26%;
+      }
+
+      &__box {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border-radius: 8px;
+        //@include rem2(padding, 15, 20);
+        padding: 1.5rem;
+
+        a {
+          text-decoration: none;
+          color: $text-color;
+
+          &:hover {
+            color: $text-color;
+            text-decoration: none;
+          }
+
+          .sign-box-selected {
+            color: #6A7C94;
+            margin-top: 15px;
+          }
+
+          div {
+            //text-transform: uppercase;
+            //font-weight: 300;
+            //border-radius: 4px;
+            //@include rem2(padding, 10, 15);
+            //color: #9BAABF;
+            //margin-bottom: 0;
+            font-family: $primary-font;
+            cursor: pointer;
+            white-space: nowrap;
+            border-radius: 6px;
+            padding: 8px 12px;
+            border: none;
+            user-select: none;
+            text-transform: uppercase;
+            color: #9baabe;
+            display: block;
+            text-overflow: ellipsis;
+            width: 100%;
+            font-weight: 600;
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            &:first-child {
+              // @include rem(margin-top, 15);
+            }
+          }
+        }
+      }
+
+      p {
+        text-align: center;
+        @include rem2(margin, 25, 0);
+      }
+
+      &__social {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        color: white;
+        border-radius: 8px;
+        @include rem(font-size, 14);
+        @include rem2(padding, 15, 20);
+        text-transform: capitalize;
+
+        a {
+          text-decoration: none;
+          color: white;
+          width: 100%;
+          text-align: center;
+
+          &:hover {
+            text-decoration: none;
+            color: white;
+          }
+          &:visited {
+            color: white;
+          }
+          &:focus {
+            color: white;
+          }
+        }
+
+        &__facebook {
+          display: inline-flex;
+          align-items: center;
+          font-weight: 500;
+          border-radius: 4px;
+          background: $facebook-color;
+          @include rem(margin-bottom, 16);
+          @include rem2(padding, 10, 15);
+          text-transform: initial;
+
+          &:hover {
+            cursor: pointer;
+            background: darken($facebook-color, 4%);
+          }
+
+          img {
+            @include rem(margin-right, 10);
+          }
+        }
+
+        &__twitter {
+          display: inline-flex;
+          align-items: center;
+          font-weight: 500;
+          border-radius: 4px;
+          background: $twitter-color;
+          @include rem(margin-bottom, 16);
+          @include rem2(padding, 10, 15);
+          text-transform: initial;
+
+          &:hover {
+            cursor: pointer;
+            background: darken($twitter-color, 4%);
+          }
+
+          img {
+            @include rem(margin-right, 10);
+          }
+        }
+
+        &__google {
+          display: inline-flex;
+          align-items: center;
+          font-weight: 500;
+          border-radius: 4px;
+          background: $google-color;
+          @include rem2(padding, 10, 15);
+          text-transform: initial;
+
+          &:hover {
+            cursor: pointer;
+            background: darken($google-color, 4%);
+          }
+
+          img {
+            @include rem(margin-right, 10);
+          }
+        }
+
+
+
+      }
+    }
+  }
+}
+
+#showPassword {
+  display: flex;
+  @include rem(margin-top, 8);
+
+  img {
+    @include rem(width, 14);
+    @include rem(margin-right, 5);
+  }
+  span {
+    font-weight: 300;
+    margin: 0;
+    display: inline-flex;
+    align-self: center;
+
+    &:hover {
+      color: darken($text-color, 4%);
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}

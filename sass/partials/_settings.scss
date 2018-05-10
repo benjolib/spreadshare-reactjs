@@ -1,0 +1,1008 @@
+.layout__content__main {
+  // settings/personal
+  &__personal {
+    display: flex;
+    flex-direction: column;
+
+    &__column {
+      display: flex;
+      flex-direction: column;
+    }
+    &__row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    @include desktop {
+      width: 80%;
+    }
+
+
+    &__profile {
+      &__text {
+        p {
+          margin: 0;
+          color: $text-color-alternate;
+          @include rem(margin-bottom, 16);
+        }
+      }
+      &__photo {
+        img {
+          display: block;
+          border-radius: 6px;
+          @include rem(width, 42);
+          @include rem(margin-right, 16);
+        }
+      }
+      &__add {
+        button {
+          border: none;
+          border-radius: 3px;
+          background: $text-color;
+          color: white;
+          text-transform: uppercase;
+          @include rem2(padding, 10, 12);
+          @include rem(margin-right, 16);
+          @include rem(font-size, 14);
+
+          &:hover {
+            background: darken($text-color, 8%);
+            cursor: pointer;
+          }
+        }
+      }
+      &__remove {
+        a {
+          text-decoration: none;
+          color: $text-link-color;
+          font-weight: 300;
+          text-transform: uppercase;
+          @include rem(font-size, 14);
+
+          &:hover {
+            color: $text-link-color-hover;
+          }
+        }
+      }
+    }
+    &__name {
+      &__text {
+        p {
+          margin: 0;
+          color: $text-color-alternate;
+          @include rem(margin-top, 16 * 3);
+          @include rem(margin-bottom, 8);
+        }
+      }
+    }
+    &__username {
+      &__text {
+        p {
+          margin: 0;
+          color: $text-color-alternate;
+          @include rem(margin-top, 16 * 3);
+          @include rem(margin-bottom, 8);
+        }
+      }
+    }
+    &__tagline {
+      &__text {
+        p {
+          margin: 0;
+          color: $text-color-alternate;
+          @include rem(margin-top, 16 * 3);
+          @include rem(margin-bottom, 8);
+        }
+      }
+      span {
+        color: #DEE0E7;
+        @include rem(font-size, 12);
+
+        i {
+          font-style: normal;
+          color: #9CAAC0;
+        }
+      }
+    }
+    &__locations {
+      &__text {
+        p {
+          margin: 0;
+          color: $text-color-alternate;
+          @include rem(margin-top, 16 * 3);
+          @include rem(margin-bottom, 8);
+        }
+      }
+      &__tags {
+        display: flex;
+        background: $background-color;
+        border-radius: 3px;
+        @include rem2(padding, 8, 12);
+
+        &__item {
+          display: flex;
+          background: inherit;
+          @include rem(margin-right, 12);
+
+          &__text {
+            margin: 0;
+            background: $card-tokens-background-color;
+            color: white;
+            font-weight: 300;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            @include rem(font-size, 14);
+            @include rem2(padding, 8, 12);
+          }
+
+          &__close {
+            display: flex;
+            justify-content: center;
+            color: $card-tokens-background-color;
+            background: white;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            text-align: center;
+            height: 100%;
+            @include rem(width, 33);
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            img {
+              @include rem(width, 9);
+            }
+          }
+        }
+      }
+    }
+    &__website {
+      &__text {
+        p {
+          margin: 0;
+          color: $text-color-alternate;
+          @include rem(margin-top, 16 * 3);
+          @include rem(margin-bottom, 8);
+        }
+      }
+    }
+    &__switch {
+      &__text {
+        p {
+          margin: 0;
+          color: $text-color-alternate;
+          @include rem(margin-top, 16 * 3);
+          @include rem(margin-bottom, 8);
+        }
+      }
+
+      &__buttons {
+        display: flex;
+        color: white;
+        background-color: #DEE0E7;
+        font-weight: 300;
+        border-radius: 5px;
+
+
+
+
+
+        &--left {
+          border-top-right-radius: 0px;
+          border-bottom-right-radius: 0px;
+          @include rem2(padding, 10, 12);
+          font-weight: 800;
+
+          &:hover {
+            cursor: pointer;
+            background: darken($background-color, 8%);
+          }
+        }
+
+        &--right {
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          @include rem2(padding, 10, 12);
+          font-weight: 800;
+          padding: 5px 10px;
+          margin: 5px;
+
+          &:hover {
+            cursor: pointer;
+            background: darken($background-color, 8%);
+            border-radius: 0;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+        }
+
+        .active {
+          background: $logo-color;
+          margin: 5px;
+          padding: 9px 14px;
+          font-size: 12px;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+  // settings/account
+  &__account {
+    display: flex;
+    flex-direction: column;
+
+    &__column {
+      display: flex;
+      flex-direction: column;
+    }
+    &__row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__email {
+      &__text {
+        p {
+          margin: 0;
+          color: $text-color-alternate;
+          @include rem(margin-bottom, 8);
+        }
+      }
+    }
+    &__password {
+      &__text {
+        p {
+          margin: 0;
+          color: $text-color-alternate;
+          @include rem(margin-top, 16 * 3);
+          @include rem(margin-bottom, 8);
+        }
+      }
+      span {
+        color: #D8D8D8;
+        text-transform: uppercase;
+        @include rem(font-size, 12);
+
+        &:hover {
+          cursor: pointer;
+          color: darken(#D8D8D8, 8%);
+        }
+      }
+    }
+    &__facebook {
+      display: flex;
+      width: 100%;
+
+      &__text {
+        p {
+          margin: 0;
+          color: $text-color-alternate;
+          @include rem(margin-top, 16 * 3);
+          @include rem(margin-bottom, 8);
+        }
+      }
+      &__button {
+        width: 90%;
+        border-radius: 4px;
+        background: $facebook-color;
+        display: flex;
+        align-items: center;
+        @include rem2(padding, 8, 16);
+
+        @include tablet {
+          width: 50%;
+        }
+        @include desktop {
+          width: 30%;
+        }
+
+        img {
+          @include rem(width, 20);
+          @include rem(margin-right, 10);
+        }
+        span {
+          margin: 0;
+          text-transform: uppercase;
+          align-self: center;
+          color: white;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background: lighten($facebook-color, 4%);
+        }
+      }
+
+      &__info {
+        color: #DEE0E7;
+        font-weight: 300;
+        @include rem(font-size, 12);
+        @include rem(margin-top, 8);
+      }
+    }
+    &__twitter {
+      display: flex;
+      width: 100%;
+
+      &__text {
+        p {
+          margin: 0;
+          color: $text-color-alternate;
+          @include rem(margin-top, 16 * 3);
+          @include rem(margin-bottom, 8);
+        }
+      }
+      &__button {
+        width: 90%;
+        border-radius: 4px;
+        background: $twitter-color;
+        display: flex;
+        align-items: center;
+        @include rem2(padding, 8, 16);
+
+        @include tablet {
+          width: 50%;
+        }
+        @include desktop {
+          width: 30%;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background: lighten($facebook-color, 4%);
+        }
+
+        &.connected {
+          background: #DEE0E7;
+
+          &:hover {
+            cursor: pointer;
+            background: darken(#DEE0E7, 8%);
+          }
+        }
+
+        img {
+          @include rem(width, 20);
+          @include rem(margin-right, 10);
+        }
+        span {
+          margin: 0;
+          text-transform: uppercase;
+          align-self: center;
+          color: white;
+        }
+      }
+
+      &__info {
+        color: #DEE0E7;
+        font-weight: 300;
+        @include rem(font-size, 12);
+        @include rem(margin-top, 8);
+      }
+    }
+    &__logout {
+      display: flex;
+
+      &__text {
+        p {
+          margin: 0;
+          color: $text-color-alternate;
+          @include rem(margin-top, 16 * 3);
+          @include rem(margin-bottom, 8);
+        }
+      }
+
+      &__link {
+        text-decoration: none;
+
+        &__button {
+          border-radius: 4px;
+          background: #DEE0E7;
+          display: flex;
+          align-items: center;
+          @include rem2(padding, 8, 16);
+          width: 50%;
+
+          &:hover {
+            cursor: pointer;
+            background: darken(#DEE0E7, 8%);
+          }
+
+          img {
+            @include rem(width, 20);
+            @include rem(margin-right, 10);
+            display: none;
+          }
+
+          span {
+            margin: 0;
+            font-weight: 300;
+            text-transform: capitalize;
+            color: white;
+            align-self: center;
+            @include rem(font-size, 16);
+          }
+        }
+      }
+    }
+  }
+  // settings/notifications
+  &__notifications {
+    display: flex;
+    flex-direction: column;
+
+    &__column {
+      display: flex;
+      flex-direction: column;
+    }
+    &__row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__text {
+      p {
+        margin: 0;
+        color: $text-color-alternate;
+        @include rem(margin-bottom, 28);
+      }
+    }
+
+    &__switch {
+      @include rem(margin-bottom, 16);
+
+      &__info {
+        p {
+          margin: 0;
+          text-transform: none;
+          @include rem(margin-left, 20);
+        }
+        p:first-child {
+          color: $text-color;
+          font-weight: 400;
+          @include rem(font-size, 16);
+        }
+        p:last-child {
+          color: $text-color-alternate;
+          font-weight: 300;
+          @include rem(font-size, 14);
+        }
+      }
+    }
+  }
+  // settings/connected
+  &__connected {}
+  // settings/wallet
+  &__wallet {
+    display: flex;
+    flex-direction: column;
+
+    &__column {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    &__row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__stats {
+      &__text {
+        p {
+          margin: 0;
+          color: $text-color-alternate;
+          @include rem(margin-bottom, 30);
+        }
+      }
+      &__data {
+        p:first-child {
+          margin: 0;
+          color: $text-color;
+          @include rem(font-size, 40);
+        }
+        p:last-child {
+          margin: 0;
+          @include rem(margin-top, 6);
+
+          i {
+            font-style: normal;
+            color: $logo-color;
+          }
+          span {
+            text-transform: uppercase;
+            color: #9CAAC0;
+          }
+        }
+      }
+    }
+
+    &__tables {
+      display: flex;
+
+      &__text {
+        @include rem(margin-bottom, 20);
+
+        p {
+          color: #B1BBC7;
+          font-weight: 300;
+        }
+      }
+
+      &__titles {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background: inherit;
+        font-weight: 400;
+
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          @include rem(margin-bottom, 10);
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &:first-child {
+            justify-content: flex-start;
+            width: 33.33%;
+
+            @include mobile {
+              margin-right: 15px;
+            }
+
+            &:hover {
+              cursor: unset;
+            }
+            p {
+              text-align: left;
+            }
+          }
+          &:last-child {
+            justify-content: flex-end;
+            p {
+              text-align: right;
+            }
+          }
+          &:nth-child(2) {
+            width: 33.33%;
+          }
+          &:nth-child(3) {
+            width: 33.33%;
+          }
+
+          p {
+            margin: 0;
+            text-align: center;
+            text-transform: none;
+            font-weight: 400;
+            @include rem(font-size, 10);
+
+            @include tablet {
+              @include rem(font-size, 12);
+            }
+            @include desktop {
+              @include rem(font-size, 14);
+            }
+          }
+          img {
+            align-self: center;
+            @include rem(margin-left, 8);
+            @include rem(width, 6);
+
+            @include tablet {
+              @include rem(width, 7);
+            }
+            @include desktop {
+              @include rem(width, 8);
+            }
+          }
+        }
+      }
+
+      &__cells {
+        background: white;
+
+        &__item {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          background: #F2F2F8;
+          border-radius: 3px;
+          font-weight: 300;
+          color: $card-tokens-background-color;
+          @include rem(font-size, 12);
+          @include rem(margin-bottom, 10);
+          @include rem2(padding, 16, 0);
+
+          @include tablet {
+            @include rem(font-size, 14);
+          }
+          @include desktop {
+            @include rem(font-size, 16);
+          }
+
+          div:first-child {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 33.33%;
+            @include rem(padding-left, 8);
+
+            @include mobile {
+              margin-right: 10px;
+            }
+          }
+          div:nth-child(2) {
+            width: 33.33%;
+            text-align: center;
+          }
+          div:last-child {
+            width: 33.33%;
+            text-align: right;
+            @include rem(padding-right, 8);
+          }
+        }
+      }
+    }
+  }
+  // settings/invite
+  &__invite {
+    display: flex;
+    flex-direction: column;
+
+    &__column {
+      display: flex;
+      flex-direction: column;
+    }
+    &__row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__email {
+      &__text {
+        p {
+          margin: 0;
+          color: $text-color-alternate;
+          @include rem(margin-bottom, 8);
+        }
+      }
+      &__field {
+        position: relative;
+        align-self: flex-start;
+        width: 100%;
+
+        @include desktop {
+          width: 50%;
+        }
+
+        input {
+          width: 94%;
+
+          @include tablet {
+            width: 97%;
+          }
+          @include desktop {
+            width: 100%;
+          }
+
+          &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #dddde3;
+          }
+          &::-moz-placeholder { /* Firefox 19+ */
+            color: #dddde3;
+          }
+          &:-ms-input-placeholder { /* IE 10+ */
+            color: #dddde3;
+          }
+          &:-moz-placeholder { /* Firefox 18- */
+            color: #dddde3;
+          }
+        }
+        div {
+          position: absolute;
+          top: 8%;
+          right: 1%;
+          height: 84%;
+          background: $logo-color;
+          border-radius: 4px;
+          padding: 0 12px;
+          @include rem2(padding, 0, 12);
+
+          &:hover {
+            cursor: pointer;
+            background: lighten($logo-color, 4%);
+          }
+
+          @include tablet {
+            right: 3.5%;
+          }
+          @include desktop {
+            right: 1%;
+          }
+          @include mobile {
+            right: 6.5%;
+          }
+
+          span {
+            display: inline-flex;
+            color: white;
+            text-transform: uppercase;
+            margin-top: 14%;
+          }
+        }
+      }
+    }
+
+    &__share {
+      &__text {
+        p {
+          margin: 0;
+          color: $text-color-alternate;
+          @include rem(margin-top, 16 * 3);
+          @include rem(margin-bottom, 8);
+        }
+      }
+      input {
+        color: #6A7C94;
+      }
+      &__field {
+        position: relative;
+        align-self: flex-start;
+        width: 100%;
+
+        @include desktop {
+          width: 50%;
+        }
+
+        input {
+          width: 94%;
+
+          @include tablet {
+            width: 97%;
+          }
+          @include desktop {
+            width: 100%;
+          }
+
+          &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #dddde3;
+          }
+          &::-moz-placeholder { /* Firefox 19+ */
+            color: #dddde3;
+          }
+          &:-ms-input-placeholder { /* IE 10+ */
+            color: #dddde3;
+          }
+          &:-moz-placeholder { /* Firefox 18- */
+            color: #dddde3;
+          }
+        }
+        div {
+          position: absolute;
+          top: 8%;
+          right: 1%;
+          height: 84%;
+          background: $logo-color;
+          border-radius: 4px;
+          padding: 0 12px;
+          @include rem2(padding, 0, 12);
+
+          &:hover {
+            cursor: pointer;
+            background: lighten($logo-color, 4%);
+          }
+
+          @include tablet {
+            right: 3.5%;
+          }
+          @include desktop {
+            right: 1%;
+          }
+          @include mobile {
+            right: 6.5%;
+          }
+          span {
+            display: inline-flex;
+            color: white;
+            text-transform: uppercase;
+            margin-top: 14%;
+          }
+        }
+      }
+    }
+
+    &__contacts {
+      &__text {
+        p {
+          margin: 0;
+          color: $text-color-alternate;
+          @include rem(margin-top, 16 * 3);
+          @include rem(margin-bottom, 8);
+        }
+      }
+      &__social {
+        border-radius: 4px;
+        @include rem(margin-top, 8);
+        @include rem(margin-right, 20);
+
+        img {
+          display: flex;
+          @include rem(width, 20);
+          @include rem2(padding, 8, 12);
+        }
+
+        &--twitter {
+          background: $twitter-color;
+
+          &:hover {
+            cursor: pointer;
+            background: lighten($twitter-color, 4%);
+          }
+        }
+        &--facebook {
+          background: $facebook-color;
+
+          &:hover {
+            cursor: pointer;
+            background: lighten($facebook-color, 4%);
+          }
+        }
+        &--gmail {
+          background: #EBF7F9;
+
+          &:hover {
+            cursor: pointer;
+            background: darken(#EBF7F9, 2%);
+          }
+        }
+      }
+    }
+
+    &__friends {
+      div.layout__content__main__invite__column {
+        div.layout__content__main__invite__row {
+          justify-content: space-around;
+          flex-direction: column;
+          @include rem(margin-bottom, 22);
+
+          @include tablet {
+            flex-direction: row;
+            margin-bottom: 0;
+          }
+          @include desktop {
+            flex-direction: row;
+            margin-bottom: 0;
+          }
+        }
+      }
+      &__text {
+        p {
+          margin: 0;
+          color: $text-color-alternate;
+          @include rem(margin-top, 16 * 3);
+          @include rem(margin-bottom, 22);
+        }
+      }
+      &__invitation {
+        div.layout__content__main__invite__column {
+          align-items: center;
+
+          div.layout__content__main__invite__row {
+            @include rem(margin-top, 10);
+            flex-direction: row;
+          }
+        }
+        img {
+          border-radius: 6px;
+          @include rem(width, 54);
+          @include rem(height, 54);
+        }
+        span {
+          font-weight: 400;
+          color: $text-color;
+          @include rem(font-size, 14);
+        }
+
+        &__accept {
+          @include rem(margin-right, 8);
+
+          img {
+            @include rem(width, 30);
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+        &__reject {
+          img {
+            @include rem(width, 30);
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // main buttons
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #F8F8FB;
+    padding: 10px 15px 10px 15px;
+    @include rem2(margin, 0, -35);
+    @include rem(margin-top, 32 * 2);
+    @include rem(margin-bottom, -25);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    // @include rem(padding, 10, 15, 10, 15);
+
+    a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: capitalize;
+      color: #B1BBC7;
+      background: transparent;
+      @include rem(margin-right, 24);
+
+      &:hover {
+        text-decoration: none;
+        color: $text-link-color-hover;
+      }
+    }
+
+    button {
+      font-weight: 500;
+      text-transform: capitalize;
+      color: white;
+      background: $logo-color;
+      border: none;
+      border-radius: 4px;
+      @include rem(font-size, 14);
+      @include rem2(padding, 8, 16);
+
+      &:hover {
+        cursor: pointer;
+        background: lighten($logo-color, 4%);
+      }
+    }
+  }
+}
+
+// aside menu
+.layout__content__aside {
+  &__box {
+  @include rem(font-size, 14);
+
+    a {
+      color: $card-tokens-background-color;
+    }
+  }
+}
+
+.up-arrow-icon {
+  color: #24AE69 !important;
+  padding-right: 3px !important;
+}

@@ -1,0 +1,365 @@
+.tableCard {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: white;
+  color: $text-color;
+  border-radius: 6px;
+  @include rem2(padding, 16, 32);
+  @include rem(margin-bottom, 20);
+
+  @include mobile {
+    padding: 20px 20px;
+  }
+
+  &__info {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    @include mobile {
+      width: 70%;
+    }
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      h3 {
+        a {
+          width: 100%;
+          align-self: flex-start;
+          margin: 0;
+          font-weight: 600;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          margin-bottom: 5px;
+          @include rem(font-size, 16);
+
+          @include tablet {
+            @include rem(font-size, 18);
+          }
+          @include desktop {
+            @include rem(font-size, 20);
+          }
+
+          &:hover {
+            cursor: pointer;
+            color: $logo-color;
+          }
+        }
+
+        span.staff-pick {
+          text-transform: uppercase;
+          color: lighten($text-color-alternate, 5);
+          margin-left: 10px;
+          line-height: 20px;
+          vertical-align: top;
+          font-weight: 300;
+          @include rem(font-size, 11);
+        }
+      }
+
+      p {
+        padding-bottom: 10px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: #b9c4d2;
+        font-weight: 500;
+        @include rem(font-size, 12);
+
+        @include tablet {
+          @include rem(font-size, 14);
+        }
+        @include desktop {
+          @include rem(font-size, 16);
+        }
+      }
+    }
+
+    &__right_buttons {
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      align-items: center;
+      display: flex;
+      align-self: flex-start;
+    }
+
+    &__button,
+    &__upvote {
+      border: 0;
+      background: $upvote-background-color;
+      color: $upvote-text-color;
+      font-weight: 300;
+      border-radius: 3px;
+      margin-right: 10px;
+      @include rem2(padding, 2, 10);
+
+      &:hover {
+        cursor: pointer;
+        background: darken($upvote-background-color, 4%);
+        color: $upvote-text-color;
+      }
+
+      a, a:hover, span {
+        color: $text-color;
+        font-weight: 600;
+        @include rem(font-size, 12);
+      }
+
+      &.green {
+        background: $primary-color;
+
+        a, a:hover, span {
+          color: white;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background: darken($primary-color, 4%);
+          color: white;
+        }
+      }
+
+      .chevronUp {
+        svg {
+          @include rem(width, 10);
+          @include rem(height, 10);
+
+          .fillColor.white {
+            fill: white;
+          }
+        }
+      }
+
+      @include tablet {
+        @include rem2(padding, 3, 18);
+
+        span {
+          color: $text-color;
+          font-weight: 600;
+          @include rem(font-size, 14);
+        }
+
+        .chevronUp {
+          svg {
+            @include rem(width, 14);
+            @include rem(height, 14);
+          }
+        }
+      }
+
+      @include desktop {
+        @include rem2(padding, 10, 20);
+
+        span {
+          color: $text-color;
+          font-weight: 600;
+          @include rem(font-size, 16);
+        }
+
+        .chevronUp {
+          svg {
+            @include rem(width, 16);
+            @include rem(height, 16);
+          }
+        }
+      }
+    }
+
+    &__subscribe.subscribed {
+      background-color: $primary-color;
+
+      &:hover {
+        cursor: pointer;
+        background: darken($primary-color, 4%);
+        color: $upvote-text-color;
+      }
+
+      span {
+        color: white;
+
+        &:after {
+          content: 'Subscribed';
+        }
+      }
+    }
+
+    &__subscribe {
+      position: absolute;
+      align-items: center;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-self: flex-start;
+      border: 0;
+      background: $upvote-background-color;
+      color: $upvote-text-color;
+      font-weight: 300;
+      border-radius: 3px;
+      outline: none;
+      @include rem2(padding, 2, 10);
+
+      &:hover {
+        cursor: pointer;
+        background: darken($upvote-background-color, 4%);
+        color: $upvote-text-color;
+      }
+
+      span {
+        color: $text-color;
+        font-weight: 600;
+        @include rem(font-size, 12);
+
+        &:after {
+          content: 'Subscribe';
+        }
+      }
+
+      @include tablet {
+        @include rem2(padding, 3, 18);
+
+        span {
+          color: $text-color;
+          font-weight: 600;
+          @include rem(font-size, 14);
+        }
+      }
+
+      @include desktop {
+        @include rem2(padding, 10, 20);
+
+        span {
+          color: $text-color;
+          font-weight: 600;
+          @include rem(font-size, 16);
+        }
+      }
+    }
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+      justify-content: flex-start;
+      width: 100%;
+      border-top: 2px solid #f7f7fb;
+      @include rem(font-size, 12);
+    }
+    @include desktop {
+      justify-content: flex-start;
+      width: 90%;
+      border-top: 2px solid #f7f7fb;
+      @include rem(font-size, 14);
+    }
+
+    &__item {
+      @include rem(margin-top, 14);
+      @include rem(margin-right, 16);
+      font-weight: 500;
+
+      &--type {
+        align-self: center;
+        background: $logo-color;
+        border-radius: 3px;
+        color: white;
+        @include rem(font-size, 10);
+        @include rem2(padding, 2, 4);
+
+        @include desktop {
+          @include rem(font-size, 16);
+          @include rem2(padding, 2, 8);
+        }
+
+        &:hover {
+          background: lighten($logo-color, 4%);
+        }
+
+        span {
+          color: white;
+        }
+      }
+      &--token {
+        align-self: center;
+        background: $card-tokens-background-color;
+        border-radius: 3px;
+        color: white;
+        @include rem(font-size, 10);
+        @include rem2(padding, 2, 4);
+
+        @include desktop {
+          @include rem(font-size, 16);
+          @include rem2(padding, 2, 8);
+        }
+
+        &:hover {
+          background: lighten($card-tokens-background-color, 4%);
+        }
+
+        span {
+          color: white;
+        }
+      }
+      &--views, &--comments, &--contributions {
+        display: none;
+        @include rem(font-size, 10);
+
+        span {
+          color: $text-color;
+
+          &:hover {
+            color: lighten($logo-color, 4%);
+          }
+
+          i {
+            font-style: normal;
+            color: $text-link-color;
+          }
+        }
+      }
+      &--views {
+        @include tablet {
+          display: flex;
+          align-items: center;
+          @include rem(font-size, 12);
+        }
+        @include desktop {
+          display: flex;
+          align-items: center;
+          @include rem(font-size, 16);
+        }
+      }
+      &--comments {
+        @include mobile {
+          display: flex;
+          align-items: center;
+        }
+        @include tablet {
+          display: flex;
+          align-items: center;
+          @include rem(font-size, 12);
+        }
+        @include desktop {
+          display: flex;
+          align-items: center;
+          @include rem(font-size, 16);
+        }
+      }
+      &--contributions {
+        margin-right: 0;
+
+        @include desktop {
+          display: flex;
+          align-items: center;
+          @include rem(font-size, 16);
+        }
+      }
+    }
+  }
+
+}
