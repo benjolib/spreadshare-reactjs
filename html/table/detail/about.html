@@ -1,9 +1,9 @@
-<!-- {% extends 'layouts/main.volt' %} -->
+{% extends 'layouts/main.volt' %}
 
-<!-- {% block title %}SpreadShare - About table {{ table['title'] }}{% endblock %} -->
+{% block title %}SpreadShare - About table {{ table['title'] }}{% endblock %}
 
-<!-- {% block content %} -->
-<!-- {{ partial('table/detail/header') }} -->
+{% block content %}
+{{ partial('table/detail/header') }}
 
 <div class="tableAbout">
   <div class="tableAbout__outer">
@@ -134,9 +134,9 @@
 
   </div>
 </div>
-<!-- {% endblock %} -->
+{% endblock %}
 
-<!-- {% block scripts %} -->
+{% block scripts %}
 <script type="text/javascript">
   function linkify(inputText) {
   var replacedText, replacePattern1, replacePattern2, replacePattern3;
@@ -172,5 +172,5 @@
   });
 </script>
 <script src="https://unpkg.com/socialshares@2/dist/socialshares.min.js" defer></script>
-<!-- {{ partial('table/detail/flag') }} -->
-<!-- {% endblock %} -->
+{{ partial('table/detail/flag') }}
+{% endblock %}

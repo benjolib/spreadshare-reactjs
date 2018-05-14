@@ -1,14 +1,14 @@
-<!-- {% extends 'layouts/main.volt' %} -->
+{% extends 'layouts/main.volt' %}
 
-<!-- {% block title %}SpreadShare - Settings for table {{ table['title'] }}{% endblock %} -->
+{% block title %}SpreadShare - Settings for table {{ table['title'] }}{% endblock %}
 
-<!-- {% block content %} -->
+{% block content %}
 
-<!-- {{ partial('table/detail/header') }} -->
+{{ partial('table/detail/header') }}
 
-<!-- {{ flash.output() }} -->
+{{ flash.output() }}
 
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
     <div class="container container--tableDetails">
         <div class="container__content">
             <div class="addTable__content__main__options">
@@ -47,8 +47,8 @@
         </aside>
     </div>
 </form>
-<!-- {% endblock %} -->
+{% endblock %}
 
-<!-- {% block scripts %} -->
-<!-- {{ partial('table/detail/flag') }} -->
-<!-- {% endblock %} -->
+{% block scripts %}
+{{ partial('table/detail/flag') }}
+{% endblock %}

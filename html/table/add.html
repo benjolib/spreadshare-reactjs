@@ -1,6 +1,6 @@
-<!-- {% extends 'layouts/main.volt' %} -->
+{% extends 'layouts/main.volt' %}
 
-<!-- {% block content %} -->
+{% block content %}
 <div class="addTable">
   <div class="white-overlay" style="{% if visitedAddTablePage is defined AND !visitedAddTablePage %}display:block;{% endif %}"></div>
   <div class="addTable__content">
@@ -101,9 +101,9 @@
   </div>
   {% endif %}
 </div>
-<!-- {% endblock %} -->
+{% endblock %}
 
-<!-- {% block scripts %} -->
+{% block scripts %}
   {% if content_js is defined AND content_js %}
     <script type="text/javascript">
         {% include content_js %}
@@ -124,4 +124,4 @@
       });
     </script>
   {% endif %}
-<!-- {% endblock %} -->
+{% endblock %}

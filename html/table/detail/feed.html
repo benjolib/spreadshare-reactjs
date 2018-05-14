@@ -1,9 +1,9 @@
-<!-- {% extends 'layouts/main.volt' %} -->
+{% extends 'layouts/main.volt' %}
 
-<!-- {% block title %}SpreadShare - Feed for table {{ table['title'] }}{% endblock %} -->
+{% block title %}SpreadShare - Feed for table {{ table['title'] }}{% endblock %}
 
-<!-- {% block content %} -->
-<!-- {{ partial('table/detail/header') }} -->
+{% block content %}
+{{ partial('table/detail/header') }}
 
 <div class="container container--tableFeed">
     <div class="container__content">
@@ -59,8 +59,8 @@
         </a>
     </aside>
 </div>
-<!-- {% endblock %} -->
+{% endblock %}
 
-<!-- {% block scripts %} -->
-<!-- {{ partial('table/detail/flag') }} -->
-<!-- {% endblock %} -->
+{% block scripts %}
+{{ partial('table/detail/flag') }}
+{% endblock %}

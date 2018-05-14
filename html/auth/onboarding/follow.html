@@ -1,9 +1,9 @@
-<!-- {% extends 'layouts/main.volt' %} -->
+{% extends 'layouts/main.volt' %}
 
-<!-- {% block header %} -->
-<!-- {% endblock %} -->
+{% block header %}
+{% endblock %}
 
-<!-- {% block content %} -->
+{% block content %}
 <form id="onboardingForm" method="post" action="/signup/location">
   <div class="follow">
     <div class="follow__content">
@@ -48,9 +48,9 @@
     </div>
   </div>
 </form>
-<!-- {% endblock %} -->
+{% endblock %}
 
-<!-- {% block scripts %} -->
+{% block scripts %}
 <script type="text/javascript">
   $(document).ready(function () {
     $('.follow__content__main__cards').on('click', '.follow__content__main__cards__item__button', function (ev) {
@@ -85,4 +85,4 @@
     });
   });
 </script>
-<!-- {% endblock %} -->
+{% endblock %}

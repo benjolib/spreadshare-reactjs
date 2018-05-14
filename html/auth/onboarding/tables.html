@@ -1,8 +1,8 @@
-<!-- {% extends 'layouts/main.volt' %} -->
+{% extends 'layouts/main.volt' %}
 
-<!-- {% block header %}{% endblock %} -->
+{% block header %}{% endblock %}
 
-<!-- {% block content %} -->
+{% block content %}
 <form id="onboardingForm" method="post" action="/signup/finished">
   <div class="tables">
     <div class="tables__content">
@@ -80,9 +80,9 @@
     </div>
   </div>
 </form>
-<!-- {% endblock %} -->
+{% endblock %}
 
-<!-- {% block scripts %} -->
+{% block scripts %}
 <script type="text/javascript">
   $(document).ready(function () {
     var $subscribeButtons = $('.tableCard__info__subscribe.subscribe');
@@ -105,4 +105,4 @@
     });
   });
 </script>
-<!-- {% endblock %} -->
+{% endblock %}
