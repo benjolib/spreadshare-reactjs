@@ -510,7 +510,7 @@ export default class Navbar extends Component {
 						</div>
 					</header>
 
-					<nav className={`navbar ${loggedIn?'': ' navbar--loggedOut'}`}>
+					{/*<nav className={`navbar ${loggedIn?'': ' navbar--loggedOut'}`}>
 
 						<div className="navbar__wrapper navbar__wrapper--left">
 							<div className="navbar__logo desktop-only desktop-only--flex">
@@ -524,7 +524,7 @@ export default class Navbar extends Component {
 
 								<input type="text" className="navbar__search__field" placeholder="Search"/>
 
-								{/* Begin Search Auto Complete Component !*/}
+								 Begin Search Auto Complete Component !
 								<div className="search-autocomplete search__dropdown">
 									<div className="title-block">
 										<div className="description">
@@ -553,7 +553,7 @@ export default class Navbar extends Component {
 													<img src="/static/icons/search-green.svg" />
 												</div>
 												<input type="text" className="navbar__search__field" placeholder="Search" />
-												{/* Begin Search Auto Complete Component !*/}
+												 Begin Search Auto Complete Component !
 												<div className="search-autocomplete search__dropdown">
 													<div className="title-block">
 														<div className="description">
@@ -613,7 +613,7 @@ export default class Navbar extends Component {
 										<img src="/static/icons/search-green.svg" />
 									</div>
 									<input type="text" className="navbar__search__field" placeholder="Search" />
-									{/* Begin Search Auto Complete Component !*/}
+									 Begin Search Auto Complete Component !
 									<div className="search-autocomplete search__dropdown">
 										<div className="title-block">
 											<div className="description">
@@ -661,7 +661,7 @@ export default class Navbar extends Component {
 						</div>
 						<span>25</span>
 
-						{/*else*/}
+						else
 						<div className="navbar__logo mobile-and-tablet mobile-and-tablet--flex">
 							<a href="/"><img src="/static/images/icon_1024.png" /></a>
 						</div>
@@ -673,7 +673,7 @@ export default class Navbar extends Component {
 
 							<input type="text" className="navbar__search__field" placeholder="Search" />
 
-							{/* Begin Search Auto Complete Component !*/}
+							 Begin Search Auto Complete Component !
 							<div className="search-autocomplete search__dropdown">
 								<div className="title-block">
 									<div className="description">
@@ -700,7 +700,7 @@ export default class Navbar extends Component {
 							<a href="/signup" className="navbar__login__signup">Sign up</a>
 							</span>
 						</div>
-					</nav>
+					</nav>*/}
 
 				</div>
 
