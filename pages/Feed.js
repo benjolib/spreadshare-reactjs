@@ -1,9 +1,9 @@
 import React, { Fragment, Component } from 'react';
 import { Header, Navbar, Footer } from '../react/components';
-import { FAQContainer } from '../react/containers';
+import { FeedContainer } from '../react/containers';
 import '../sass/styles.scss'
 
-export default class Faq extends Component {
+export default class Feed extends Component {
 
 	/*static async getInitialProps ({ req, query }) {
 		console.log(query)
@@ -21,7 +21,7 @@ export default class Faq extends Component {
         <Navbar/>
 
         <section className="main">
-          <FAQContainer active={this.props.active}/>
+          <FeedContainer/>
         </section>
 
         <Footer/>

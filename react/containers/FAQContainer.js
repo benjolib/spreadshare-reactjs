@@ -1,7 +1,7 @@
 import React, {Fragment, Component} from 'react';
 import { Company, Content, Product, Token } from "../components/FAQs";
 
-export default class AboutContainer extends Component {
+export default class FAQContainer extends Component {
 
 	static defaultProps = {
 		active: 'company'

@@ -35,6 +35,15 @@ app.prepare().then(() => {
 			return app.render(req, res, '/index', query)
 		}
 	})
+			server.get('/feed', (req, res) => {
+
+
+
+
+				const {pathname, query} = parse(req.url, true)
+				return app.render(req, res, '/Feed', query)
+			})
+
 	server.get('/faq', (req, res) => {
 		const {pathname, query} = parse(req.url, true)
 		return app.render(req, res, '/Faq', {
