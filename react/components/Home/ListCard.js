@@ -19,7 +19,7 @@ class ListCard extends Component {
     render() {
         return (
             <div className="list-card {{ large ? 'list-card--large' : '' }} {{ half ? 'list-card--half' : '' }}">
-                <a href="#">
+                <a href="/list">
                     <div className="list-card__image" style={{background: "#f5f5f5 url('https://picsum.photos/872/258/?image=1') center / cover"}}>
                         <div className="list-card__listingCount">85 LISTINGS</div>
                     </div>

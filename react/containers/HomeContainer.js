@@ -69,13 +69,6 @@ class HomeContainer extends Component {
                     <ListCard/>
                 </div>
 
-                <div className="u-flex u-flexWrap gutter load-more-container"/>
-                <div className="u-flex u-flexJustifyCenter">
-                    <a href="#"
-                       className="re-button re-button--load-more" style={{display: 'none'}}>
-                        Load More
-                    </a>
-                </div>
             </div>
         )
     }
